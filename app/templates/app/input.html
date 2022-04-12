@@ -1,0 +1,26 @@
+{% extends "app/base.html" %}{% load widget_tweaks %}{% block content %}
+
+<div class="my-4">
+    <h2>記入項目</h2>
+  </div>
+  
+  <form method="post">
+    {% csrf_token %}
+    <div class="formpost mt-2">
+      {% render_field form.name class="form-control" placeholder="自分の名前もしくはニックネームを入力" %}
+    </div>
+    <div class="formpost mt-2">
+      {% render_field form.receiver class="form-control" placeholder="相手の名前もしくはニックネームを入力" %}
+    </div>
+    <div class="formpost mt-2">
+      {% render_field form.address class="form-control" placeholder="アドレスを入力" %}
+    </div>
+    <div class="formpost mt-2">
+      {% render_field form.message class="form-control" placeholder="メッセージを入力してください" %}
+    </div>
+    <div class="text-center">
+      <button class="btn btn-warning btn-lg mt-4" type="submit">投稿する</button>
+    </div>
+  </form>
+
+{% endblock %}

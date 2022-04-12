@@ -1,0 +1,11 @@
+{% extends "app/base.html" %} {% block content %}
+
+<h3 class="mb-4 tex">{{ post_data.name }}</h3>
+<div class="text-center">
+  <img src="{{ post_data.image.url }}" alt="" style="width:300px;">
+</div>
+<div class="text-center">
+  <a class="btn btn-warning btn-lg mt-4" href="{{ post_data.image.url }}" download>保存する</a>
+</div>
+
+{% endblock %}

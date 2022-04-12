@@ -1,0 +1,11 @@
+{% extends "app/base.html" %} {% block content %}
+
+<h3 class="mb-4 tex">あなたはこのメッセージを見るまでに</h3>
+<h3 class="mb-4 tex">{{ elapsed_time }}</h3>
+<h3 class="mb-4 tex">我慢することが出来ました！！</h3>
+<div class="text-center">
+  <p>{{ post_data.name}} さんからのメッセージです</p>
+  <p>{{ post_data.message}} </p>
+</div>
+
+{% endblock %}

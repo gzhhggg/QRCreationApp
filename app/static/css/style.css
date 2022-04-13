@@ -85,7 +85,20 @@
       margin-bottom: 0;
       padding-bottom: 0;
   }
+  /* contact */
 
+  .contact {
+    max-width: 800px;
+  }
+
+  .form-control:focus {
+    border-color: #ee6c4d;
+    box-shadow: none;
+  }
+
+  .card {
+    border: none;
+  }
   /* パソコンで見たときは"pc"のclassがついた画像が表示される */
 .pc { display: block !important; }
 .sp { display: none !important; }

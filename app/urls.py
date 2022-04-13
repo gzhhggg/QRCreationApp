@@ -8,4 +8,5 @@ urlpatterns = [
     path('other/<str:key>/',views.OtherView.as_view(),name='other'),
     path('delete/',views.DeleteView.as_view(),name='delete'),
     path('description/',views.DescriptionView.as_view(),name='description'),
+    path('accept/<str:key>/',views.AcceptView.as_view(),name='accept'),
 ]

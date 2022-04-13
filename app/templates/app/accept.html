@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <title>メッセージが届いています</title>
+  </head>
+  <body>
+    <main>
+        <div class="text-center mx-3">
+            <img src="{% static 'img/letter.png' %}" alt="" class="img-fluid" />
+            <p class="mb-4">{{ post_data.name }}さんからメッセージが届いています</p>
+            <div class="text-center">
+                <a type="button" class="btn btn-warning  btn-lg mb-4" href="{% url 'other' post_data.key %}">受け取る</a>
+            </div>
+        </div>
+    </main>
+  </body>
+</html>

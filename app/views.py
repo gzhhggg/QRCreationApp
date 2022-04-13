@@ -32,11 +32,11 @@ class InputView(View):
             'form':form,
         })
     def post(self,request,*args,**kwargs):
-        form = PostForm(request.POST or None)
+        form = form = PostForm(request.POST or None)
         key = (''.join(random.SystemRandom().choice(string.ascii_letters + string.digits) for _ in range(30)))
         baseurl = request._current_scheme_host
         # baseurl = request.build_absolute_uri()
-        relativeurl = 'other/' + key
+        relativeurl = 'accept/' + key
         url = urljoin(baseurl,relativeurl)
         img = qrcode.make(url)
         img_path = settings.MEDIA_ROOT + "/images/" + key + ".jpg"
@@ -170,3 +170,16 @@ class DeleteView(View):
 class DescriptionView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'app/description.html')
+
+class AcceptView(View):
+    def get(self,request,*args,**kwargs):
+        post_data = Post.objects.get(key=self.kwargs['key'])
+        return render(request,'app/accept.html',{
+            'post_data':post_data
+        })
+
+    def post(self,request,*args,**kwargs):
+        post_data = Post.objects.get(key=self.kwargs['key'])
+        return render(request,'app/other.html',{
+            'post_data':post_data
+        })

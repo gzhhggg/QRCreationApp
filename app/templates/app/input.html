@@ -1,26 +1,28 @@
 {% extends "app/base.html" %}{% load widget_tweaks %}{% block content %}
 
-<div class="my-4">
-    <h3>入力画面</h3>
+<div class="card text-center contact mx-auto rounded">
+  <div class="card-body">
+    <h2 class="mb-4">入力画面</h2>
+    <form method="post">
+      {% csrf_token %}
+      <div class="formpost mt-2">
+        {% render_field form.name class="form-control" placeholder="自分の名前もしくはニックネームを入力" %}
+      </div>
+      <div class="formpost mt-2">
+        {% render_field form.receiver class="form-control" placeholder="相手の名前もしくはニックネームを入力" %}
+      </div>
+      <div class="formpost mt-2">
+        {% render_field form.address class="form-control" placeholder="アドレスを入力" %}
+      </div>
+      <div class="formpost mt-2">
+        {% render_field form.message class="form-control" placeholder="メッセージを入力してください" %}
+      </div>
+      <div class="mb-3 mt-3">
+        <button class="btn btn-warning" type="submit">
+          <i class="fas fa-paper-plane"></i> QRを作成する
+        </button>
+      </div>
+    </form>
   </div>
-  
-  <form method="post">
-    {% csrf_token %}
-    <div class="formpost mt-2">
-      {% render_field form.name class="form-control" placeholder="自分の名前もしくはニックネームを入力" %}
-    </div>
-    <div class="formpost mt-2">
-      {% render_field form.receiver class="form-control" placeholder="相手の名前もしくはニックネームを入力" %}
-    </div>
-    <div class="formpost mt-2">
-      {% render_field form.address class="form-control" placeholder="アドレスを入力" %}
-    </div>
-    <div class="formpost mt-2">
-      {% render_field form.message class="form-control" placeholder="メッセージを入力してください" %}
-    </div>
-    <div class="text-center mt-2">
-      <button class="btn btn-warning btn-lg mt-4" type="submit">QRを作成する</button>
-    </div>
-  </form>
-
+</div>
 {% endblock %}

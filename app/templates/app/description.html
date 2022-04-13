@@ -1,0 +1,67 @@
+{% extends "app/base.html" %} {% block content %}
+{% load static %}
+
+<div class="text-left my-4" style = "padding: 10px; border-bottom: solid 1px rgb(185, 185, 185);">
+    <h2>操作説明</h2>
+</div>
+<div class="text-left m-3">
+    <div class = "mb-5">
+        <h4 class="mb-2">手順①</h4>
+        <p>
+            作成ボタンをクリックして項目に入力してください。<br>
+            入力が完了したら「QRを作成する」ボタンをクリックしてください。
+        </p>
+        <img class="pc" class="border" src="{% static 'img/input-pc.jpg' %}" style="max-width: 900px;" alt="パソコン用の画像">
+        <img class="sp" class="border" src="{% static 'img/input-sp.jpg' %}" alt="スマートフォン用の画像">
+    </div>
+    <div class = "mb-5">
+        <h4 class="mb-2">手順②</h4>
+        <p>
+            QRコードが作成されます。<br>
+            内容に誤りが無ければ保存ボタンを押して保存してください。<br>
+            テストメールを送信して登録したアドレスにメールが来るか確認してください<br>
+            QRを「見てはだめ」と言って相手に送ってください。                        
+        </p>
+        <img class="pc" src="{% static 'img/complite-pc.jpg' %}" style="max-width: 900px;" alt="パソコン用の画像">
+        <img class="sp" src="{% static 'img/complite-sp.jpg' %}" alt="スマートフォン用の画像">
+    </div>
+</div>
+<div class="text-left my-4" style = "padding: 10px; border-bottom: solid 1px rgb(185, 185, 185);">
+    <h2>QRを受け取った相手</h2>
+</div>
+<div class="text-left m-3">
+    <div class = "mb-5">
+        <h4 class="mb-2">手順①</h4>
+        <p>
+            QRコードを読み込むと下記の画面が表示されます<br>
+        </p>
+        <img class="pc" class="border" src="{% static 'img/accept-pc.jpg' %}"  style="max-width: 900px;" alt="パソコン用の画像">
+        <img class="sp" class="border" src="{% static 'img/accept-sp.jpg' %}" alt="スマートフォン用の画像">
+    </div>
+    <div class = "mb-5">
+        <h4 class="mb-2">手順②</h4>
+        <p>
+            受け取るボタンを押すとメッセージと我慢した時間が表示されます。<br>
+            その後、登録したアドレスにメールが届きます。                      
+        </p>
+        <img class="pc" src="{% static 'img/other-pc.jpg' %}" style="max-width: 900px;" alt="パソコン用の画像">
+        <img class="sp" src="{% static 'img/other-sp.jpg' %}" alt="スマートフォン用の画像">
+    </div>
+</div>
+<div class="text-left my-4" style = "padding: 10px; border-bottom: solid 1px rgb(185, 185, 185);">
+    <h2>注意事項</h2>
+</div>
+<div class="text-left m-3">
+    <div class = "mb-5">
+        <ul>
+            <li type="disc" class="mb-3">作成されたQRコードを複数人に送らないでください<br>
+                <p>※登録されたメッセージを表示するサイトは2回以上アクセスがあると自動的に削除されます</p>
+            </li>
+            <li type="disc" class="mb-3">作成されたQRコードに半年間アクセスがない場合はメッセージを表示するサイトは削除されます</li>
+            <li type="disc" class="mb-3">喧嘩の原因になってもクレームは受け付けておりません</li>
+        </ul>
+    </div>
+</div>
+
+
+{% endblock %}

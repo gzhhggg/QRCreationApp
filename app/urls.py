@@ -7,4 +7,5 @@ urlpatterns = [
     path('complite/<str:key>/',views.CompliteView.as_view(),name='complite'),
     path('other/<str:key>/',views.OtherView.as_view(),name='other'),
     path('delete/',views.DeleteView.as_view(),name='delete'),
+    path('description/',views.DescriptionView.as_view(),name='description'),
 ]

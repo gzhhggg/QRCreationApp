@@ -1,11 +1,19 @@
 {% extends "app/base.html" %} {% block content %}
 
-<h3 class="mb-4 tex">あなたはこのメッセージを見るまでに</h3>
-<h3 class="mb-4 tex">{{ elapsed_time }}</h3>
-<h3 class="mb-4 tex">我慢することが出来ました！！</h3>
-<div class="text-center">
-  <p>{{ post_data.name}} さんからのメッセージです</p>
-  <p>{{ post_data.message}} </p>
-</div>
+<div class="receive-view">
+  <div class = "bg-light p-4 mb-5">
+      <div class = "text-center">
+          <p class="mb-3 tex">あなたはこのメッセージを見るまでに・・・</p>
+          <p class="mb-3  font-weight-bold tex">{{ elapsed_time }}</p>
+          <p class="mb-3 tex">我慢することが出来ました！！</p>
+          <p class="mb-3 tex">{{ post_data.name}}さんからのメッセージです</p>
+      </div>
+      <div class="wp-block-group is-style-letter">
+          <div class="wp-block-group__inner-container">
+          <p>{{ post_data.message|linebreaksbr }}</p>
+          </div>
+      </div>
+  </div>  
+</div> 
 
 {% endblock %}

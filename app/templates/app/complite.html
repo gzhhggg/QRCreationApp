@@ -1,11 +1,32 @@
 {% extends "app/base.html" %} {% block content %}
 
-<h3 class="mb-4 tex">{{ post_data.name }}</h3>
-<div class="text-center">
-  <img src="{{ post_data.image.url }}" alt="" style="width:300px;">
+<div class="text-center my-4" style = "padding: 10px; border-bottom: solid 1px rgb(185, 185, 185);">
+  <h3 class="mb-4">QRコードが作成されました</h3>
+  <img class = "mb-4" src="{{ post_data.image.url }}" alt="" style="width:300px;">
+  <p class="mb-2">保存して{{ post_data.receiver }}さんに送信してください。</p>
+  <p class="mb-2">{{ post_data.receiver }}さんがQRを読み込んだ時にメール通知が届きます。</p>
+  <p class="mb-2">複数人に送信しないでください。</p>
+  <p class="mb-3">確認のためテストメールを送信いたします。</p>
+  <div class="text-center mb-4">
+      <a class="btn btn-warning m-2" href="{{ post_data.image.url }}" download>保存する</a>
+      <a class="btn btn-warning m-2" href="{{ post_data.image.url }}" download>テストメール送信</a>
+  </div>
 </div>
-<div class="text-center">
-  <a class="btn btn-warning btn-lg mt-4" href="{{ post_data.image.url }}" download>保存する</a>
-</div>
+<div class="receive-view">
+  <p class ="text-left mb-3">※{{ post_data.receiver }}さんがQRを読み込んだ時に表示される内容です</p>
+  <div class = "bg-light p-4 mb-5">
+      <div class = "text-center">
+          <p class="mb-3 tex">あなたはこのメッセージを見るまでに・・・</p>
+          <p class="mb-3  font-weight-bold tex">??日??時間??分??秒</p>
+          <p class="mb-3 tex">我慢することが出来ました！！</p>
+          <p class="mb-3 tex">{{ post_data.name }}さんからのメッセージです</p>
+      </div>
+      <div class="wp-block-group is-style-letter">
+          <div class="wp-block-group__inner-container">
+            <p>{{ post_data.message|linebreaksbr }}</p>
+          </div>
+      </div>
+  </div>  
+</div> 
 
 {% endblock %}

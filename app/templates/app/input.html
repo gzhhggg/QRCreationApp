@@ -1,7 +1,7 @@
 {% extends "app/base.html" %}{% load widget_tweaks %}{% block content %}
 
 <div class="my-4">
-    <h2>記入項目</h2>
+    <h3>入力画面</h3>
   </div>
   
   <form method="post">
@@ -18,8 +18,8 @@
     <div class="formpost mt-2">
       {% render_field form.message class="form-control" placeholder="メッセージを入力してください" %}
     </div>
-    <div class="text-center">
-      <button class="btn btn-warning btn-lg mt-4" type="submit">投稿する</button>
+    <div class="text-center mt-2">
+      <button class="btn btn-warning btn-lg mt-4" type="submit">QRを作成する</button>
     </div>
   </form>
 

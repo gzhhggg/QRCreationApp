@@ -1,3 +1,4 @@
+from django.dispatch import receiver
 from django.views.generic import View
 from django.shortcuts import render,redirect
 from requests import request
@@ -42,12 +43,14 @@ class InputView(View):
         img.save(img_path)
         if form.is_valid():
             name = form.cleaned_data['name']
+            receiver = form.cleaned_data['receiver']
             email = form.cleaned_data['address']
             message = form.cleaned_data['message']
             
             post_data = Post()
             post_data.name = name
             post_data.key = key
+            post_data.receiver = receiver
             post_data.address = email
             post_data.message = message
             post_data.image = img_path
@@ -164,3 +167,6 @@ class DeleteView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'app/delete.html')
 
+class DescriptionView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'app/description.html')

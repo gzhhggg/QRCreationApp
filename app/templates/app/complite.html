@@ -3,14 +3,20 @@
 <div class="text-center my-4" style = "padding: 10px; border-bottom: solid 1px rgb(185, 185, 185);">
   <h3 class="mb-4">QRコードが作成されました</h3>
   <img class = "mb-4" src="{{ post_data.image.url }}" alt="" style="width:300px;">
-  <p class="mb-2">保存して{{ post_data.receiver }}さんに送信してください。</p>
+  <p class="mb-2">QRを保存して、{{ post_data.receiver }}さんに送信してください。</p>
   <p class="mb-2">{{ post_data.receiver }}さんがQRを読み込んだ時にメール通知が届きます。</p>
   <p class="mb-2">複数人に送信しないでください。</p>
   <p class="mb-3">確認のためテストメールを送信いたします。</p>
-  <div class="text-center mb-4">
-      <a class="btn btn-warning m-2" href="{{ post_data.image.url }}" download>保存する</a>
-      <a class="btn btn-warning m-2" href="{{ post_data.image.url }}" download>テストメール送信</a>
+  <div class="text-center mb-2 d-flex justify-content-center">
+    <a class="btn btn-warning m-2" href="{{ post_data.image.url }}" download>保存する</a>
+    <form method="get">
+      {% csrf_token %}
+      <input class="btn btn-warning m-2" type="submit" id="button" name="start_button" value="テストメール送信">
+    </form>
   </div>
+      {% if send %}
+        <p class="mb-4">テストメールが送信されました</p>
+      {% endif %}
 </div>
 <div class="receive-view">
   <p class ="text-left mb-3">※{{ post_data.receiver }}さんがQRを読み込んだ時に表示される内容です</p>

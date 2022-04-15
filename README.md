@@ -1,6 +1,6 @@
 # QRCreationApp
 
-タイトル：「見ちゃダメQR / Plz dont look QR」  
+タイトル：「[見ちゃダメQR / Plz dont look QR](http://13.231.113.86/)」  
 
 「ダメ」と言われるとやってみたくなることはありませんか？  
 物事を禁止されると逆にそのことをやりたくなってしまう現象をカリギュラ効果と言います。  
@@ -21,8 +21,9 @@ QRを開いた画面
 メッセージ表示画面  
 <img src="https://user-images.githubusercontent.com/93046615/163533948-d9c0ae3b-97cf-4e95-a8ff-bc7d908e3e90.jpg" width="500px">  
 
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
- 
+※詳細説明はサイトに記載してありますのでご確認ください。
+
+
 # Features
  
 "hoge"のセールスポイントや差別化などを説明する

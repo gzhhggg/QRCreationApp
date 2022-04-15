@@ -36,44 +36,29 @@ Python ライブラリ
 * django-allauth 0.41.0
 * django-environ 0.8.1
 * django-widget-tweaks 1.4.12  
- 
-※requriements-dev.txtをご確認ください
 
-# Installation
- 
-Requirementで列挙したライブラリなどのインストール方法を説明する
- 
-```bash
-pip install huga_package
-```
- 
-# Usage
- 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
- 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
+※requriements-dev.txtをご確認ください  
+
+データベース  
+* PostgreSQL  
+
+クラウドサービス  
+* AWS EC2  
+* gunicorn
+* NGINX
+
+構成イメージ  
+<img src="https://user-images.githubusercontent.com/93046615/163540648-0a279d1b-4bc3-453a-b507-db6f142a802e.png" width="600px">
  
 # Note
  
-注意点などがあれば書く
+喧嘩の原因になっても責任は負いません！！  
  
 # Author
- 
-作成情報を列挙する
- 
-* 作成者
-* 所属
-* E-mail
+
+* 作成者 KeiichiAdachi
+* 所属 Japan/Aichi
+* E-mail keiichimonoo@gmail.com
  
 # License
-ライセンスを明示する
- 
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
- 
-社内向けなら社外秘であることを明示してる
- 
-"hoge" is Confidential.
+なし  

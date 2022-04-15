@@ -15,8 +15,11 @@
 入力画面  
 <img src="https://user-images.githubusercontent.com/93046615/163531830-a839cac6-fc94-4e12-9876-56319a283736.jpg" width="500px">  
 完了画面  
-<img src="https://user-images.githubusercontent.com/93046615/163532138-f63237b0-626c-4950-bb4c-1c08359601f4.jpg" width="500px">
-
+<img src="https://user-images.githubusercontent.com/93046615/163532138-f63237b0-626c-4950-bb4c-1c08359601f4.jpg" width="500px">  
+QRを開いた画面  
+<img src="https://user-images.githubusercontent.com/93046615/163533590-5311382d-29d6-4d61-95ee-b835e6e69753.jpg" width="500px">  
+メッセージ表示画面  
+<img src="https://user-images.githubusercontent.com/93046615/163533948-d9c0ae3b-97cf-4e95-a8ff-bc7d908e3e90.jpg" width="500px">  
 
 "hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
  

@@ -29,15 +29,14 @@ QRを開いた画面
 
 # Requirement
  
-"hoge"を動かすのに必要なライブラリなどを列挙する
- 
 Python ライブラリ
 * Django 3.1.4
 * Pillow 9.1.0
 * qrcode 7.3.1
-* django-allauth==0.41.0
-* django-environ==0.8.1
-* django-widget-tweaks==1.4.12  
+* django-allauth 0.41.0
+* django-environ 0.8.1
+* django-widget-tweaks 1.4.12  
+ 
 ※requriements-dev.txtをご確認ください
 
 # Installation

@@ -24,17 +24,22 @@ QRを開いた画面
 ※詳細説明はサイトに記載してありますのでご確認ください。
 
 
-# Features
- 
-"hoge"のセールスポイントや差別化などを説明する
- 
+# LINK  
+「[見ちゃダメQR / Plz dont look QR](http://13.231.113.86/)」  
+
 # Requirement
  
 "hoge"を動かすのに必要なライブラリなどを列挙する
  
-* huga 3.5.2
-* hogehuga 1.0.2
- 
+Python ライブラリ
+* Django 3.1.4
+* Pillow 9.1.0
+* qrcode 7.3.1
+* django-allauth==0.41.0
+* django-environ==0.8.1
+* django-widget-tweaks==1.4.12  
+※requriements-dev.txtをご確認ください
+
 # Installation
  
 Requirementで列挙したライブラリなどのインストール方法を説明する

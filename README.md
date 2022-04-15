@@ -10,7 +10,14 @@
 このアプリはカリギュラ効果を使って相手が約束をどれくらい守れるか知ることが出来ます。  
  
 # DEMO
- 
+トップページ  
+<img src="https://user-images.githubusercontent.com/93046615/163531154-d675394b-8d4b-488e-af9f-8e2bf490a2b0.jpg" width="500px">  
+入力画面  
+<img src="https://user-images.githubusercontent.com/93046615/163531830-a839cac6-fc94-4e12-9876-56319a283736.jpg" width="500px">  
+完了画面  
+<img src="https://user-images.githubusercontent.com/93046615/163532138-f63237b0-626c-4950-bb4c-1c08359601f4.jpg" width="500px">
+
+
 "hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
  
 # Features
